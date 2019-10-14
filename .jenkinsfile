@@ -47,7 +47,7 @@ stage('Release')
 {
 /* Put necessary commands for release of product here */
 steps{
-echo 'Released the project'
+echo 'Released to Production'
 }
 }
 
