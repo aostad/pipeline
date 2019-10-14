@@ -5,16 +5,15 @@ stages
 {
 stage('Build')
 {
-/* for mac use "sh" instead of bat. Put maven command for build e.g. "mvn clean install" */
 steps
-{
+{/* Put necessary commands for building here */
 bat "mvn clean"
 }
 }
 
 stage('Deploy')
 {
-/* example */
+/* Put necessary commands for deployment here */
 steps{
 echo 'deploy the build'
 }
@@ -22,7 +21,7 @@ echo 'deploy the build'
 
 stage('Test')
 {
-/* example */
+/* Put necessary commands for testing the program here */
 steps{
 bat "mvn test"
 }
@@ -30,17 +29,14 @@ bat "mvn test"
 
 stage('Release')
 {
-/* example */
+/* Put necessary commands for release of product here */
 steps{
 echo 'Releasing the project'
 }
 }
 
-
-}/* stages */
-
+}/* end of stages */
 
 
 
-
-}
+}/* end of pipeline project */
