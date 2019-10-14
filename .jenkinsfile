@@ -1,0 +1,51 @@
+pipeline
+{
+agent any
+stages
+{
+stage('Build')
+{
+/* for mac use "sh" instead of bat. Put maven command for build e.g. "mvn clean install" */
+bat "mvn clean"
+}
+
+stage('deploy')
+{
+/* example */
+steps{
+echo 'deploy the build'
+}
+}
+
+stage('Test')
+{
+/* example */
+steps{
+bat "mvn test"
+}
+}
+
+stage('Unit Testing')
+{
+/* example */
+steps{
+bat "mvn compile"
+}
+}
+
+stage('Release')
+{
+/* example */
+steps{
+echo 'Releasing the project'
+}
+}
+
+
+}/* stages */
+
+
+
+
+
+}
