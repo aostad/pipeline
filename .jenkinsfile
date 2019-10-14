@@ -6,7 +6,10 @@ stages
 stage('Build')
 {
 /* for mac use "sh" instead of bat. Put maven command for build e.g. "mvn clean install" */
+steps
+{
 bat "mvn clean"
+}
 }
 
 stage('Deploy')
