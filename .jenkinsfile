@@ -9,7 +9,7 @@ stage('Build')
 bat "mvn clean"
 }
 
-stage('deploy')
+stage('Deploy')
 {
 /* example */
 steps{
@@ -22,14 +22,6 @@ stage('Test')
 /* example */
 steps{
 bat "mvn test"
-}
-}
-
-stage('Unit Testing')
-{
-/* example */
-steps{
-bat "mvn compile"
 }
 }
 
