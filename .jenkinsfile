@@ -11,15 +11,15 @@ bat "mvn clean"
 }
 }
 
-stage('Deploy')
+stage('Deploy to Shared-Test')
 {
 /* Put necessary commands for deployment here */
 steps{
-echo 'deploy the build'
+echo 'Deployed to Shared-Test'
 }
 }
 
-stage('Test')
+stage('Regression Test')
 {
 /* Put necessary commands for testing the program here */
 steps{
@@ -27,16 +27,29 @@ bat "mvn test"
 }
 }
 
+stage('Deploy to UAT')
+{
+/* Put necessary commands for deployment here */
+steps{
+echo 'Deployed to Shared-Test'
+}
+}
+
+stage('Smoke Test')
+{
+/* Put necessary commands for testing the program here */
+steps{
+echo 'Tested on UAT'
+}
+}
+
 stage('Release')
 {
 /* Put necessary commands for release of product here */
 steps{
-echo 'Releasing the project'
+echo 'Released the project'
 }
 }
 
 }/* end of stages */
-
-
-
 }/* end of pipeline project */
